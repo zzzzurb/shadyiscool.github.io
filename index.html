@@ -8,7 +8,10 @@
 </head>
 <body>
     <div class="container">
-        <img src="./logo.png" alt="Hedronix Logo"/>
+        <button class="image-button" onclick="moveUp()">
+            <img src="./logo.png" alt="Hedronix Logo"/>
+        </button>
+        <div class="hidden-text">Welcome to Hedronix</div>
     </div>
     <style>
         html, body {
@@ -39,16 +42,23 @@
             animation: rotation 40s infinite linear;
         }
 
-        img {
+        .image-button {
             width: 80%; /* normal scale */
-            position: relative;
-            z-index: 1; /* Bring the image to the foreground */
+            background: none;
+            border: none;
+            padding: 0;
+            cursor: pointer;
         }
 
-        @media only screen and (max-width: 600px) {
-            img {
-                width: 60%; /* mobile scale (screen width less than 600px) */
-            }
+        img {
+            width: 100%;
+        }
+
+        .hidden-text {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+            animation: fade-in 2s ease-in-out;
         }
 
         @keyframes rotation {
@@ -59,6 +69,24 @@
                 transform: rotate(360deg);
             }
         }
+
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
     </style>
+    <script>
+        function moveUp() {
+            const button = document.querySelector('.image-button');
+            button.style.transform = 'translateY(-50px)';
+            
+            const hiddenText = document.querySelector('.hidden-text');
+            hiddenText.style.display = 'block';
+        }
+    </script>
 </body>
 </html>
