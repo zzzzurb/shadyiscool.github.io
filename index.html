@@ -19,6 +19,8 @@
             justify-content: center;
             align-items: center;
             background-image: url("./space.jpg");
+            animation: rotation 2s infinite linear;
+            
         }
 
         img {
@@ -31,6 +33,16 @@
                 scale: 0.25; /* mobile scale (screen width less than 600px) */
             }
         }
+        
+            @keyframes rotation {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(359deg);
+      }
+    }
+            
     </style>
 </body>
 </html>
