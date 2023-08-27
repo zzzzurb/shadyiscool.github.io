@@ -22,8 +22,14 @@
         }
 
         img {
-            scale: 0.35;
+            scale: 0.35; /* normal scale */
             translate: -10px 0px;
+        }
+
+        @media only screen and (max-width: 600px) {
+            img {
+                scale: 0.25; /* mobile scale (screen width less than 600px) */
+            }
         }
     </style>
 </body>
