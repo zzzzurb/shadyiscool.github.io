@@ -7,29 +7,36 @@
     <title>Hedronix</title>
 </head>
 <body>
-    <img src="./logo.png" alt="Hedronix Logo"/>
+    <div class="container">
+        <img src="./logo.png" alt="Hedronix Logo"/>
+    </div>
     <style>
         html, body {
             width: 100%;
             height: 100%;
             overflow: hidden;
+            margin: 0;
+            padding: 0;
         }
-        body {
+        .container {
             display: flex;
             justify-content: center;
             align-items: center;
+            width: 100%;
+            height: 100%;
             background-image: url("./space.jpg");
-            animation: rotation 20s infinite linear; /* Apply the rotation animation */
+            background-size: cover;
+            animation: rotation 20s infinite linear;
         }
 
         img {
-            scale: 0.35; /* normal scale */
-            translate: -10px 0px;
+            width: 35%; /* normal scale */
+            transform: translate(-10px, 0px);
         }
 
         @media only screen and (max-width: 600px) {
             img {
-                scale: 0.25; /* mobile scale (screen width less than 600px) */
+                width: 25%; /* mobile scale (screen width less than 600px) */
             }
         }
 
@@ -38,7 +45,7 @@
                 transform: rotate(0deg);
             }
             to {
-                transform: rotate(359deg);
+                transform: rotate(360deg);
             }
         }
     </style>
