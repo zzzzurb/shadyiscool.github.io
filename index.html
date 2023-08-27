@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Existing meta tags and link for favicon -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
@@ -15,8 +14,57 @@
         </a>
     </div>
     <style>
-        /* Existing CSS styles */
-        
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background-image: url("./space.jpg");
+            background-repeat: repeat;
+            animation: rotation 75s infinite linear;
+        }
+
+        img {
+            width: 80%; /* normal scale */
+            position: relative;
+            z-index: 1; /* Bring the image to the foreground */
+        }
+
+        @media only screen and (max-width: 600px) {
+            img {
+                width: 60%; /* mobile scale (screen width less than 600px) */
+            }
+        }
+
+        @keyframes rotation {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
         .youtube-button {
             position: absolute;
             bottom: 10px; /* Adjust the vertical position as needed */
