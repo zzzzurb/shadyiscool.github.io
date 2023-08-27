@@ -1,1 +1,0 @@
-# shadyiscool.github.io
