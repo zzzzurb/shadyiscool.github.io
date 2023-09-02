@@ -30,20 +30,9 @@
             height: 100%;
             position: relative;
             overflow: hidden;
-        }
-
-        .container::before {
-            content: "";
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background-image: url("./space.jpg");
-            background-repeat: repeat;
-            background-position: center;
-            background-size: cover; /* Adjust this property to control how the background image is displayed */
-            animation: rotation 75s infinite linear;
+            background-image: url("./space.gif"); /* Set your static background image here */
+            background-size: cover; /* Adjust to cover or contain the background image */
+            background-repeat: no-repeat;
         }
 
         img {
@@ -55,15 +44,6 @@
         @media only screen and (max-width: 600px) {
             img {
                 width: 60%; /* mobile scale (screen width less than 600px) */
-            }
-        }
-
-        @keyframes rotation {
-            from {
-                transform: rotate(0deg);
-            }
-            to {
-                transform: rotate(360deg);
             }
         }
 
