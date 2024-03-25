@@ -3,27 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
-    <title>Hedronix</title></title>
-</head>
-<body>
-    <img src="./logo.png" alt="Hedronix Logo"/>
+    <title>My Blog</title>
     <style>
-        html, body {
-            width: 100%;
-            height: 100%;
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #f4f4f4;
+            padding: 10px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #333;
+            padding: 5px 10px;
+            margin-right: 10px;
+        }
+        nav a:hover {
+            background-color: #ddd;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
             overflow: hidden;
         }
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-image: url("./space.jpg");
+        .post {
+            background-color: #f9f9f9;
+            padding: 20px;
+            margin-bottom: 20px;
         }
-
-        img {
-            scale: 0.5;
+        .post h2 {
+            color: #333;
+        }
+        .post p {
+            color: #666;
         }
     </style>
+</head>
+<body>
+    <header>
+        <h1>My Blog</h1>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <!-- Add more navigation links here -->
+    </nav>
+    <div class="container">
+        <div class="post">
+            <h2>First Blog Post</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae eros id dolor fermentum pharetra id nec odio.</p>
+            <!-- Add more content for your first blog post -->
+        </div>
+        <div class="post">
+            <h2>Second Blog Post</h2>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+            <!-- Add more content for your second blog post -->
+        </div>
+        <!-- Add more posts here -->
+    </div>
 </body>
 </html>
